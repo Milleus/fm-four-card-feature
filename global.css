@@ -138,7 +138,7 @@ select {
 /* Utility             */
 /* ------------------- */
 .bg-neutral-100 {
-  background-color: var(--clr-neutral-100);
+  background-color: hsl(var(--clr-neutral-100));
 }
 
 .fs-300 {
@@ -241,11 +241,11 @@ select {
 }
 
 .cards > div:nth-child(1):before {
-  background-color: hsl(var(--clr-red-400));
+  background-color: hsl(var(--clr-cyan-400));
 }
 
 .cards > div:nth-child(2):before {
-  background-color: hsl(var(--clr-cyan-400));
+  background-color: hsl(var(--clr-red-400));
 }
 
 .cards > div:nth-child(3):before {
@@ -270,20 +270,32 @@ select {
     ". c3 .";
   }
 
-  .cards > div img {
-    max-width: 4rem;
-  }
-
   .cards > div:nth-child(1) {
     grid-area: c1;
   }
+
   .cards > div:nth-child(2) {
     grid-area: c2;
   }
+
   .cards > div:nth-child(3) {
     grid-area: c3;
   }
+
   .cards > div:nth-child(4) {
     grid-area: c4;
+  }
+
+  .cards > div {
+    padding: 2rem;
+  }
+
+  .cards > div p {
+    margin-top: 0.375rem;
+  }
+
+  .cards > div img {
+    margin-top: 2.5rem;
+    max-width: 4rem;
   }
 }
